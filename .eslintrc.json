@@ -5,6 +5,7 @@
 },
 "plugins": ["prettier", "mocha"],
   "rules": {
+    "no-console":"off",
     "prettier/prettier": [
       "error",
       {
