@@ -7,22 +7,16 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
+const index = require("./routes/index");
 
-const port = 3001;
+index.set(app);
 
-app.get("/", (req, res) => res.send("Hello World!"));
+const port = process.env.PORT;
 
-app.get("/urlParam", (req, res) => {
-  console.log(req.query);
-  res.send(true);
-});
-
-app.post("/test", (req, res) => {
-  console.log(req.query);
-
-  res.send({ friend: 1 });
-});
+// app.get("/", (req, res) => res.send("Hello World!"));
 
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)
 );
+
+module.exports = app;

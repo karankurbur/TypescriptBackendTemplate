@@ -2,8 +2,10 @@
   "name": "BackendTemplate",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "dev": "nodemon app.js",
+    "start": "pm2 start app.js",
     "test": "mocha"
   },
   "repository": {
@@ -32,13 +34,14 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.0.0",
     "mocha": "^8.0.1",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "nodemon": "^2.0.4"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "nodemon": "^2.0.4"
+    "pm2": "^4.4.0"
   }
 }

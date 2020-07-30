@@ -1,8 +1,11 @@
 /* eslint-disable func-names */
 /* eslint-disable node/no-unpublished-require */
+require("dotenv").config();
+
+console.log(process.env.PORT);
 const chai = require("chai");
 const chaiHttp = require("chai-http");
-const app = require("../index");
+const app = require("../app");
 
 const { expect } = chai;
 chai.use(chaiHttp);
@@ -14,7 +17,7 @@ describe("Redeem Endpoints", function () {
 
   it("Succesfully create a redeem.", async function () {
     const json = {};
-    const res = await chai.request(app).post("/addRedeem").send(json);
+    const res = await chai.request(app).post("/test").send(json);
     expect(res.statusCode).to.equals(200);
   });
 
