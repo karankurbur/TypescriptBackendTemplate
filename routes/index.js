@@ -1,5 +1,5 @@
-const query = require("./query.js");
+const route1 = require("./route1.js");
 
 module.exports.set = (app) => {
-  query.set(app);
+  route1.set(app);
 };
