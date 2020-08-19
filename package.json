@@ -1,12 +1,12 @@
 {
-  "name": "BackendTemplate",
+  "name": "TypescriptBackendTemplate",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js",
-    "start": "pm2 start app.js",
-    "test": "mocha"
+    "start": "pm2 start dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "build": "tsc -p ."
   },
   "repository": {
     "type": "git",
